@@ -1,0 +1,77 @@
+.sidebar {
+  width: 60px; /* Default width for large screens */
+  background-color: #34495e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  transition: width 0.3s ease, padding-top 0.3s ease;
+}
+
+.sidebar-icon {
+  margin-bottom: 20px;
+  transition: margin-bottom 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  /* Adjust for larger desktops */
+  .sidebar {
+    width: 55px;
+  }
+
+  .sidebar-icon {
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Adjust for tablets */
+  .sidebar {
+    width: 50px;
+    padding-top: 15px;
+  }
+
+  .sidebar-icon {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust for large phones */
+  .sidebar {
+    width: 45px;
+    padding-top: 10px;
+  }
+
+  .sidebar-icon {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Adjust for small phones */
+  .sidebar {
+    width: 100%; /* Full width for mobile */
+    flex-direction: row; /* Horizontal layout for mobile */
+    justify-content: space-around; /* Distribute icons evenly */
+    padding: 10px 0; /* Adjust padding for horizontal layout */
+    position: fixed; /* Fix to top of screen */
+    bottom: 0; /* Align to bottom for mobile navbar style */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+
+  .sidebar-icon {
+    margin-bottom: 0; /* Remove bottom margin for horizontal layout */
+    margin-right: 0; /* Remove right margin for consistency */
+    flex: 1; /* Allow icons to flex and evenly distribute */
+    text-align: center; /* Center icons in the available space */
+  }
+
+  .sidebar-icon img {
+    max-width: 100%; /* Ensure icons fit well within the flex space */
+    height: auto; /* Maintain aspect ratio */
+  }
+}

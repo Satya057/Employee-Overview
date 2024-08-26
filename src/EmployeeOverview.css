@@ -1,0 +1,285 @@
+.employee-overview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+}
+
+.employee-overview h1 {
+  grid-column: span 4;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.overview-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+}
+
+.overview-card h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.overview-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #6c757d;
+}
+
+.overview-card h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.overview-card .percentage {
+  font-size: 16px;
+  color: #28a745;
+  margin-top: -50px;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.chart-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+
+.small-chart {
+  width: 100px;
+  height: 100px;
+}
+
+.large-chart {
+  width: 200px;
+  height: 200px;
+}
+
+.chart-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.chart-center-text h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.chart-center-text p {
+  font-size: 12px;
+  margin: 0;
+  color: #6c757d;
+}
+
+.chart-annotations {
+  margin-top: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.annotation {
+  font-size: 12px;
+  color: #6c757d;
+  position: absolute;
+}
+
+.annotation-1 {
+  top: 50px;
+  left: 20px;
+}
+
+.annotation-2 {
+  top: 60px;
+  right: 20px;
+}
+
+.annotation-3 {
+  bottom: 20px;
+  left: 30px;
+}
+
+.bar-chart {
+  width: 100%;
+  height: 150px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .employee-overview {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .overview-card h2 {
+    font-size: 20px;
+  }
+
+  .overview-card h3 {
+    font-size: 16px;
+  }
+
+  .overview-card p {
+    font-size: 13px;
+  }
+
+  .chart-container {
+    width: 130px;
+    height: 130px;
+  }
+
+  .small-chart {
+    width: 90px;
+    height: 90px;
+  }
+
+  .large-chart {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  .employee-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .overview-card {
+    padding: 15px;
+  }
+
+  .overview-card h2 {
+    font-size: 18px;
+  }
+
+  .overview-card h3 {
+    font-size: 14px;
+  }
+
+  .overview-card p {
+    font-size: 12px;
+  }
+
+  .chart-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .small-chart {
+    width: 80px;
+    height: 80px;
+  }
+
+  .large-chart {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .employee-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-overview h1 {
+    font-size: 20px;
+  }
+
+  .overview-card {
+    padding: 10px;
+  }
+
+  .overview-card h2 {
+    font-size: 16px;
+  }
+
+  .overview-card h3 {
+    font-size: 14px;
+  }
+
+  .overview-card p {
+    font-size: 12px;
+  }
+
+  .chart-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .small-chart {
+    width: 70px;
+    height: 70px;
+  }
+
+  .large-chart {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 576px) {
+  .employee-overview {
+    padding: 10px;
+  }
+
+  .overview-card {
+    padding: 8px;
+  }
+
+  .overview-card h2 {
+    font-size: 14px;
+  }
+
+  .overview-card h3 {
+    font-size: 12px;
+  }
+
+  .overview-card p {
+    font-size: 11px;
+  }
+
+  .chart-container {
+    width: 80px;
+    height: 80px;
+  }
+
+  .small-chart {
+    width: 60px;
+    height: 60px;
+  }
+
+  .large-chart {
+    width: 120px;
+    height: 120px;
+  }
+
+  .chart-center-text h2 {
+    font-size: 18px;
+  }
+
+  .chart-center-text p {
+    font-size: 10px;
+  }
+
+  .annotation {
+    font-size: 10px;
+  }
+}
